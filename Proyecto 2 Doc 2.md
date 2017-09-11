@@ -571,6 +571,55 @@ Se tienen diferentes herramientas para poder generar métodos de seguridad en el
 
 - Implementación de SSO
 
+
+##2 An?lisis
+
+###Escenarios de Rendimiennto
+
+**1.** El sistema debe detectar el rol en el que se encuentra cada usuario para permitirle el acceso de acuerdo a sus permisos, esta información para entender lo que pueden hacer.
+
+- **Fuente:**Sistema.
+
+- **Estímulo:** Detección de rol.
+
+- **Entorno:** Aplicación
+
+- **Artefacto:** Autenticación
+
+- **Respuesta:** Detección de permisos por su rol
+
+- **Medida de la Respuesta:** Servicio
+
+
+**2.** Cualquier llamado a un servicio hecho desde dentro del perímetro en el sistema se debe de realizar es confianza implícita.
+
+- **Fuente:**Usuario.
+
+- **Est?mulo:** Solicitud del sistema.
+
+- **Entorno:** Sistema
+
+- **Artefacto:** Permisos
+
+- **Respuesta:** Permisos de apliación
+
+- **Medida de la Respuesta:**
+
+
+**3.** Cuando el cliente acceda al servicio, el servidor puede comprobar estos detalles y confirmar el servicio. 
+
+- **Fuente:** Usuario, servidor
+
+- **Estímulo:** Detección de protocolo.
+
+- **Entorno:** Servidor
+
+- **Artefacto:** Autorizar el servicio
+
+- **Respuesta:** Seguridad y confianza del servicio
+
+- **Medida de la Respuesta:** Encabezamiento
+
 ##Diseño en aplicación y en sistema
 
 ###Vistas de arquitectura. 
@@ -590,8 +639,9 @@ Se tienen diferentes herramientas para poder generar métodos de seguridad en el
 
 ###Mejores prácticas
 
-Elaboración de un mapa de riesgo: Cuando se tienen identificados los riesgos que se pueden presentar, se pueden identificar cuáles son las prioridades del negocio.
-Diseñar un plan o programa estratégico de seguridad de la información: Basándonos en el mapa de riesgo que se realiza, se debe de realizar un plan con las mejores prácticas y metodología para proteger la información tanto del sistema como del usuario.
+**Elaboración de un mapa de riesgo:** Cuando se tienen identificados los riesgos que se pueden presentar, se pueden identificar cuáles son las prioridades del negocio.
+
+**Diseñar un plan o programa estratégico de seguridad de la información:** Basándonos en el mapa de riesgo que se realiza, se debe de realizar un plan con las mejores prácticas y metodología para proteger la información tanto del sistema como del usuario.
 
 **Políticas de seguridad:** Práctica que nos ayudará para para tener un conocimiento y reglas del manejo de la información.
 
@@ -602,6 +652,9 @@ Diseñar un plan o programa estratégico de seguridad de la información: Basán
 ##Tácticas: 
 
 **Análisis de seguridad:**
+
+- Analisis de seguridad
+
 - Resistir los ataques
 
 - Reaccionar ante ataques
@@ -609,6 +662,7 @@ Diseñar un plan o programa estratégico de seguridad de la información: Basán
 - Recuperarse a los ataques
 
 ###Herramientas.
+
 - OpenID
 - SAML
 - LDAP
